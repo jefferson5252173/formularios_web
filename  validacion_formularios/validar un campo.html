@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validación</title>
+</head>
+<body>
+
+    <h2>Formulario de Ejemplo</h2>
+
+    <form action="" method="" id="miFormulario" name="" onsubmit="return valida()">
+        <input type="text" id="campo" name="campo" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function valida() {
+            var valor = document.getElementById("campo").value;
+            if (valor == null || valor.length == 0 || valor.trim() == "") {
+                alert("El campo no puede estar vacío");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
